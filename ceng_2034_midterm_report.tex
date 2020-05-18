@@ -1,0 +1,61 @@
+\documentclass[onecolumn]{article}
+%\usepackage{url}
+%\usepackage{algorithmic}
+\usepackage[a4paper]{geometry}
+\usepackage{datetime}
+\usepackage[margin=2em, font=small,labelfont=it]{caption}
+\usepackage{graphicx}
+\usepackage{mathpazo} % use palatino
+\usepackage[scaled]{helvet} % helvetica
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{subfigure}
+% Letterspacing macros
+\newcommand{\spacecaps}[1]{\textls[200]{\MakeUppercase{#1}}}
+\newcommand{\spacesc}[1]{\textls[50]{\textsc{\MakeLowercase{#1}}}}
+
+\title{\spacecaps{Assignment Report 1: Process and Thread Implementation}\\ \normalsize \spacesc{CENG2034, Operating Systems} }
+
+\author{Beyzanur Öztürk\\beyzanurozturk@posta.mu.edu.tr}
+%\date{\today\\\currenttime}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This report has processes and threads programming in Python. First, you will see the some methods in os library and then threading and requests libraries. The methods and the way its' uses all depends on Assignment Guide in midterm. 
+\end{abstract}
+
+
+\section{Introduction}
+This lab is important because the study of Operating System is based on terminology but the lab provides us to do some practice on it. There are such things becoming more understandable.
+
+\section{Assignments}
+
+\subsection{Print PID of itself}
+First of all, we see the method "os.getpid()" to acces PID of itself. I think it is simple.
+
+\subsection{If OS is linux, print loadavg}
+Secondly, we see the methods "os.getloadavg()" and "os.name".
+getloadavg() takes the 1minute , 5 minute, 15 minute load averages.
+os.name determines which os is running on your system(for linux use posix!)
+
+\subsection{taking 5 min loadavg and cpu core count}
+In this section, we checking the 5 min loadavg is near or close to the cpu core count. We see the method "cpu count()". And for taking five min loadavg assign three variable to the os.getloadavg() and the middle one is 5min value.
+\subsection{check the urls are valid with threads}
+In final section, I define a method which is checking the URLs using requests lib and its functions. Since there are 5 URLs I used for loop and put threads in it.
+
+\section{Results}
+Since my computer system is Linux I could also see the outputs of each command. 
+
+
+\section{Conclusion}
+At the end of this midterm, I have learned os library, requests library, threads library in Python and understand how is used and why is used. 
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
